@@ -1,0 +1,90 @@
+@font-face {
+  font-family: 'poppins';
+  src: url('./fonts/Poppins-Regular.ttf');
+}
+
+body {
+  font-family: 'poppins', sans-serif;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-areas:
+    "a a b"
+    "a a c"
+    "d e f";
+  gap: 30px 40px;
+  width: 107%;
+  margin: 0 auto;
+}
+
+.news-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+}
+
+.thumbnail {
+  background-image: url("https://images.pexels.com/photos/4057663/pexels-photo-4057663.jpeg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #d9d9d9;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  margin-bottom: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.thumbnail:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.news-card p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.news-card.principal {
+  grid-area: a;
+}
+
+.news-grid > .news-card:nth-child(2) {
+  grid-area: b;
+}
+.news-grid > .news-card:nth-child(3) {
+  grid-area: c;
+}
+.news-grid > .news-card:nth-child(4) {
+  grid-area: d;
+}
+.news-grid > .news-card:nth-child(5) {
+  grid-area: e;
+}
+.news-grid > .news-card:nth-child(6) {
+  grid-area: f;
+}
+
+@media (max-width: 900px) {
+  .news-grid {
+    grid-template-areas:
+      "a"
+      "b"
+      "c"
+      "d"
+      "e"
+      "f";
+  }
+
+  .news-grid {
+    row-gap: 25px;
+    column-gap: 50px;
+  }
+
+  .thumbnail {
+    aspect-ratio: 16 / 10;
+  }
+}

@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'poppins';
+  src: url('./fonts/Poppins-Regular.ttf');
+}
+
+body {
+  font-family: 'poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+  width: 100%;
+  max-width: 1600px; /* Limite para telas grandes */
+  margin: 0 auto;
+  padding: 40px 80px; /* Espaçamento lateral generoso */
+  box-sizing: border-box;
+}
