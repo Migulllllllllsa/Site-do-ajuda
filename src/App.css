@@ -3,29 +3,33 @@
   src: url('./fonts/Poppins-Regular.ttf');
 }
 
-body {
-  font-family: 'poppins', sans-serif;
+@font-face {
+  font-family: 'poppins';
+  src: url('./fonts/Poppins-Bold.ttf');
+  font-weight: bold;
 }
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #fff;
+  font-family: 'poppins', sans-serif;
+  background-color: #fafafa;
   color: #333;
 }
 
 .app {
   width: 100%;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-.container {
-  flex: 1;
+.content-area {
   width: 100%;
-  max-width: 1600px; /* Limite para telas grandes */
-  margin: 0 auto;
-  padding: 40px 80px; /* Espaçamento lateral generoso */
+  padding: 40px 90px;
   box-sizing: border-box;
+  background-color: #fafafa; /* fundo branco visível */
+}
+
+.TituloDosConcursos {
+  font-family: 'poppins';
+  font-weight: bold;
 }
